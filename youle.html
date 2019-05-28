@@ -1,1 +1,81 @@
 
+<html>
+        <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+        
+        <head>        <meta charset="UTF-8">
+        </head>
+        <body>
+            <style>
+
+			.test_box {
+				width: 300px;
+				min-height: 50px;
+				/*设置最小高度*/
+				max-height: 1000px;
+				/*设置最大高度超过300px时出现滚动条*/
+				_height: 120px;
+
+				padding: 13px;
+				outline: 0;
+				border: 1px solid #a0b3d6;
+				font-size: 16px;
+				line-height: 24px;
+				word-wrap: break-word;
+				overflow-x: hidden;
+				overflow-y: auto;
+				border-color: rgba(82, 168, 236, 0.8);
+				box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1), 0 0 8px rgba(82, 168, 236, 0.6);}
+
+            </style>
+            <div id='head' >
+                <h1>游乐王子翻译宝典</h1>
+            </div>
+            <div  id='nl' class="test_box" contenteditable="true">
+                        
+            </div>
+            <input type="button"  value="开始翻译" onclick="fun()"/>
+            <br>
+            <div  id='ylyy' class="test_box" contenteditable="true">
+                    </div>
+            <h4>cr 豆瓣<a href="https://www.douban.com/people/191199466/">爱理酱</a></h4>
+
+                    <script>
+    String.prototype.replaceAll = function(oldStr , newStr){
+        var reg = new RegExp(oldStr,'g');
+        return this.replace(reg,newStr);
+    };
+
+    function fun(){
+    var nlDom = document.getElementById('nl');
+    var text = nlDom.innerHTML;
+    text = text.replaceAll('样','亚');
+    text = text.replaceAll('点','嗲');
+    text = text.replaceAll('贪','汤');
+    text = text.replaceAll('当','单');
+    text = text.replaceAll('伤','扇');
+    text = text.replaceAll('浪','拉');
+    text = text.replaceAll('费','扇');
+    text = text.replaceAll('上','汕');
+    text = text.replaceAll('儿','阿');
+    text = text.replaceAll('蛮','瞒');
+    text = text.replaceAll('玩','娃');
+    text = text.replaceAll('书','术');
+    text = text.replaceAll('多','跺');
+    text = text.replaceAll('想','现');
+    text = text.replaceAll('惨','铲');
+    text = text.replaceAll('魔','摸');
+    text = text.replaceAll('黑','喝');
+    text = text.replaceAll('蓝','狼');
+    text = text.replaceAll('口','吼');
+    text = text.replaceAll('你','泥');
+    text = text.replaceAll('与','雨');
+    text = text.replaceAll('自行','竞');
+    text = text.replaceAll('管','寡');
+    document.getElementById("ylyy").innerHTML=text;
+    }
+
+                        </script>
+        </body>
+    
+    
+    </html>
